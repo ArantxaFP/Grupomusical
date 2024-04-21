@@ -1,0 +1,359 @@
+/* Font general styles */
+h1 {
+  color: #ff4398;
+  font-family: cursive;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+body { 
+  height: 100vh; 
+  color: #333; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home-page body { 
+  background: linear-gradient(to bottom, #fff, #ffddec);
+}
+
+
+/* Estilos para el header */
+header {
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px 10px; 
+}
+
+header nav ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline; 
+  margin-right: 10px; 
+}
+
+header nav ul li a {
+  color: #fff; 
+  text-decoration: none; 
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #333; 
+  text-decoration: none;
+}
+
+/* Estilo para resaltar el enlace de la página actual */
+nav ul li a.current {
+  color: #ff4398; 
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: #ff4398;
+  color: white; 
+  padding: 20px; 
+  text-align: left; 
+  margin-top: 5%;
+}
+
+
+/* Estilos para la página home */
+
+/* Estilos para el header de la home*/
+header.home-page {
+  background-image: url("../img/componentes_skz_superboard_mv.jpg");
+  background-size: cover; 
+  background-position: center; 
+  color: #fff; 
+  font-size: 3rem;
+  padding: 100px 0; 
+  text-align: center; 
+}
+
+header.home-page nav {
+  margin-top: 5%; 
+}
+
+header.home-page nav ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+header.home-page nav ul li {
+  display: inline; 
+  margin-right: 40px; 
+}
+
+header.home-page nav ul li a {
+  color: #fff; 
+  text-decoration: none; 
+}
+
+header.home-page nav ul li a:hover {
+  color: #ff4398; 
+}
+
+header.home-page h1 {
+  font-size: 3em; 
+}
+
+/* Estilos para el contenido principal */
+#main {
+  padding: 50px 0; /* Espaciado interior */
+  text-align: center; /* Alinea el contenido al centro */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.container {
+  max-width: 800px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Estilos para la imagen dentro del contenedor */
+.image-container {
+  display: flex; /* Usar flexbox para centrar vertical y horizontalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Establecer altura completa de la ventana */
+}
+
+.image-container img {
+  max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
+  max-height: 100%; /* Ajustar el tamaño máximo de la imagen */
+}
+
+/*estilos página categoría*/
+
+.categoria-page body{
+  background-color: #fff; 
+}
+
+/* Estilos para el listado de miembros */
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%; 
+  margin: 0 auto; 
+}
+
+.member {
+  width: calc(50% - 5%); /* Cada caja ocupa el 45% del ancho de su contenedor (50% - 5%) */
+  margin-bottom: 5%; /* Separación entre cada caja del 5% */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Para tablets: 4 elementos por fila */
+@media (max-width: 768px) {
+  .member {
+      width: calc(50% - 5%); 
+  }
+}
+
+/* Para móviles: 1 elemento por fila */
+@media (max-width: 480px) {
+  .member {
+      width: calc(100% - 5%); 
+  }
+}
+
+.member img {
+  width: 80%; 
+}
+
+
+/*button home*/
+#skz-btn {
+  position: relative;
+  padding: 15px 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 14px;
+  color: #ff4398; 
+  background-color: #FFFFFF; 
+  border: 1px solid transparent; 
+  transition: all .3s; 
+  z-index: 1; 
+  font-family: 'Josefin Sans', sans-serif; 
+  letter-spacing: 1px; 
+}
+
+
+#skz-btn:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ff4398; 
+  transition: all .3s; 
+  z-index: -1; 
+}
+
+#skz-btn:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+  border: 1px solid #ff4398; 
+  transition: all .3s; 
+  z-index: -2; 
+}
+
+#skz-btn:hover {
+  color: #ff4398; 
+}
+
+#skz-btn:hover:before {
+  top: -10px; 
+  bottom: -10px; 
+  left: 0; 
+  right: 0; 
+  border-width: 0; 
+}
+
+#skz-btn:hover:after {
+  top: 0; 
+  bottom: 0; 
+  left: -10px; 
+  right: -10px;
+  border-width: 1px; 
+}
+
+
+/* Estilos para el artículo */
+
+.biography h2 {
+  text-align: center; 
+}
+
+article {
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+/* Estilos para el h2 dentro del artículo */
+article h2 {
+  text-align: center; 
+}
+
+/* Estilos para el aside */
+aside {
+  margin: 0 auto; /* Centra horizontalmente */
+  max-width: 400px; /* Establece un ancho máximo */
+  background-color: #f9f9f9; /* Color de fondo */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el título dentro del aside */
+aside h3 {
+  text-align: center; 
+  color: #333; 
+  font-size: 1.5rem; 
+  margin-bottom: 20px; 
+}
+
+/* Estilos para la lista dentro del aside */
+aside ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+/* Estilos para los elementos de la lista dentro del aside */
+aside li {
+  line-height: 1.6; 
+  margin-bottom: 10px; 
+}
+
+
+/*ralla efecto alargarse*/
+.skz-divider-separator {
+  display: inline-block; 
+  width: 100%; 
+  transition: transform 0.3s ease-in-out; 
+  transform-origin: center; 
+}
+
+.skz-divider:hover .skz-divider-separator {
+  transform: scaleX(3.05); 
+}
+
+/*página de enlaces*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.links-page {
+  padding: 0;
+  text-align: left;
+  list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+.links-page li {
+  margin-bottom: 10px;
+}
+
+.links-page li a {
+  color: #333; /* Color predeterminado del texto */
+  text-decoration: none;
+}
+
+.links-page li a:hover {
+  color: #ff4398; /* Cambia el color del texto al hacer hover */
+}
+
+
+.video-container {
+  position: relative;
+  width: 70%;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
