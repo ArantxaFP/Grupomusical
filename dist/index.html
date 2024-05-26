@@ -15,18 +15,38 @@
 <script src="/styles.5072464b.js"></script><script src="/miembros.js"></script></head>
 
 <body class="home-page">
-
-        <header class="home-page">
-            <nav>
-                <ul>
-                    <li><a href="/pages/miembros.html">Miembros</a></li>
-                    <li><a href="/pages/presentacion.html">Presentación</a></li>
-                    <li><a href="/pages/links.html">Enlaces</a></li>
+    <!-- Include para incorporar el header como componente reutilizado -->
+    <!-- header.html -->
+<header class="header">
+    <div class="logo-header">
+        <a href="/index.html"><img src="/logo-header.4332ee75.png" alt="Stray Kids Logo" class="logo"></a>
+        <h2 class="header-title">Grupo de K-Pop reconocido mundialmente</h2>
+    </div>
+    <nav id="main-menu">
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <button class="close-btn" aria-label="Cerrar menú" style="display: none;">&#10005;</button>
+        <!-- Botón de cierre inicialmente oculto -->
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="/pages/miembros.html">Miembros &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="/pages/leeknow.html">Lee Know</a></li>
+                    <li><a href="/pages/bangchan.html">Bang Chan</a></li>
                 </ul>
-            </nav>
-            <h1>Stray <span class="highlight">kids</span></h1>
-        </header>
-    
+            </li>
+            <li><a href="/pages/presentacion.html">Presentación</a></li>
+            <li><a href="/pages/links.html">Enlaces</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <header class="home-page">
+        <div class="text-container">
+            <h1 class="clipped-text">Conoce al grupo <br>Stray Kids</h1>
+        </div>
+    </header>
+
 
     <!-- Contenido principal -->
     <main id="main">
