@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - STRAY KIDS</title>
-    <link rel="stylesheet" href="/index.91688108.css">
+    <link rel="stylesheet" href="/styles.5072464b.css">
     <meta name="description" content="Pàgina dedicada a la difusií del grup de Kpop Stray Kids">
-    <link rel="icon" href="/favicon.df2340ab.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.aa45fd99.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -16,17 +16,30 @@
 
 <body> 
     <!-- Include para incorporar el header como componente reutilizado -->   
-    <header>
-    <nav>
+    <!-- header.html -->
+<header class="header">
+    <div class="logo-header">
+        <a href="/index.html"><img src="/logo-header.4332ee75.png" alt="Stray Kids Logo" class="logo"></a>
+        <h2 class="header-title">Grupo de K-Pop reconocido mundialmente</h2>
+    </div>
+    <nav id="main-menu">
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <button class="close-btn" aria-label="Cerrar menú" style="display: none;">&#10005;</button>
+        <!-- Botón de cierre inicialmente oculto -->
         <ul>
             <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/pages/categoria.html">Categoría</a></li>
+            <li class="dropdown">
+                <a href="/pages/miembros.html">Miembros &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="/pages/leeknow.html">Lee Know</a></li>
+                    <li><a href="/pages/bangchan.html">Bang Chan</a></li>
+                </ul>
+            </li>
             <li><a href="/pages/presentacion.html">Presentación</a></li>
             <li><a href="/pages/links.html">Enlaces</a></li>
         </ul>
     </nav>
 </header>
-
   
     <!-- Contenido principal -->
     <main>
@@ -38,6 +51,11 @@
                 <li><a href="https://drama.fandom.com/es/wiki/Stray_Kids" target="_blank">Usado para información general https://drama.fandom.com/es/wiki/Stray_Kids</a></li>
                 <li><a href="https://drama.fandom.com/es/wiki/Bang_Chan" target="_blank">Usado para información de Bangchan https://drama.fandom.com/es/wiki/Bang_Chan</a></li>
                 <li><a href="https://drama.fandom.com/es/wiki/Lee_Know" target="_blank">Usado para información de Lee Know https://drama.fandom.com/es/wiki/Lee_Know</a></li>
+                <li><a href="https://glitchblackmusic.tumblr.com/post/155593884051/tech-tunnel" target="_blank">Imagen que se muestra debajo del nombre del grupo en la home https://glitchblackmusic.tumblr.com/post/155593884051/tech-tunnel</a></li>
+                <li><a href="https://tenor.com/ca/view/heart-bubble-pops-gif-17975531" target="_blank">Gif usado en la animacion del prefooter de la home https://tenor.com/ca/view/heart-bubble-pops-gif-17975531</a></li>
+                <li><a href="https://www.cleanpng.com/png-stray-kids-hellevator-brand-logo-stray-kids-3659977/" target="_blank">Logo convertido a png con fondo transparente usado en el header y de base para el logo del footer https://drama.fandom.com/es/wiki/Lee_Know</a></li>
+            
+            
             </ul>
         </section>
 
@@ -47,26 +65,55 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/8ziUcTYwARI" frameborder="0" allowfullscreen=""></iframe>
             </div>
         </section>
+
+<!-- Flecha SVG para hacer scroll hacia arriba -->
+<div id="btn-scroll-top" class="scroll-top hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
+        </path>
+    </svg>
+</div>
+
+
+
     </main>
 
 
     <!-- Include para incorporar el footer como componente reutilizado -->
     <footer class="footer">
     <div class="container">
-        <div>
+        <div class="logo-footer">
+            <a href="/index.html"><img src="/logo-footer.5f1c411d.png" alt="Stray Kids Logo"></a>
+            <div>
+                <p>2024 © PAC 2 html sobre Stray Kids</p>
+                <p>Actividad realizada por Aranzazu Fernandez</p>
+            </div>
+        </div>
+        <nav id="footer-menu">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/miembros.html">Miembros</a></li>
+                <li><a href="/pages/presentacion.html">Presentación</a></li>
+                <li><a href="/pages/links.html">Enlaces</a></li>
+        </ul></nav>
+        <div class="contact">
             <ul>
                 <li><a href="https://straykids.jype.com/">Sitio web oficial</a></li>
                 <li><a href="mailto:info@straykids.com">Contacto</a></li>
             </ul>
         </div>
-        <div class="credits">
-            <p>2024 © PAC 1 html sobre Stray Kids</p>
-            <p>Actividad realizada por Aranzazu Fernandez</p>
-        </div>
-    </div>         
+        
+
+    </div>
 </footer>
 
-<script src="/links.f31d21cc.js"></script></body>
+   
+
+    <!-- Archivo de script JavaScript -->
+    <script src="/script.c10090b4.js"></script>
+
+
+</body>
 </html>
 
 

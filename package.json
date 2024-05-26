@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
-    "parcel:dev": "parcel",
-    "parcel:build": "parcel build",
+    "parcel:dev": "parcel src/index.html",
+    "parcel:build": "parcel build src/index.html",
     "clean": "rimraf dist .parcel-cache"
   },
   "keywords": [],

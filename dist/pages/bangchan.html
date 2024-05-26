@@ -5,39 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - STRAY KIDS</title>
-    <link rel="stylesheet" href="/index.91688108.css">
+    <link rel="stylesheet" href="/styles.5072464b.css">
     <meta name="description" content="Pàgina dedicada a la difusií del grup de Kpop Stray Kids">
-    <link rel="icon" href="/favicon.df2340ab.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.aa45fd99.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-</head>
+<script src="/presentacion.js"></script></head>
 
 <body> 
     <!-- Include para incorporar el header como componente reutilizado -->   
-    <header>
-    <nav>
+    <!-- header.html -->
+<header class="header">
+    <div class="logo-header">
+        <a href="/index.html"><img src="/logo-header.4332ee75.png" alt="Stray Kids Logo" class="logo"></a>
+        <h2 class="header-title">Grupo de K-Pop reconocido mundialmente</h2>
+    </div>
+    <nav id="main-menu">
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <button class="close-btn" aria-label="Cerrar menú" style="display: none;">&#10005;</button>
+        <!-- Botón de cierre inicialmente oculto -->
         <ul>
             <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/pages/categoria.html">Categoría</a></li>
+            <li class="dropdown">
+                <a href="/pages/miembros.html">Miembros &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="/pages/leeknow.html">Lee Know</a></li>
+                    <li><a href="/pages/bangchan.html">Bang Chan</a></li>
+                </ul>
+            </li>
             <li><a href="/pages/presentacion.html">Presentación</a></li>
             <li><a href="/pages/links.html">Enlaces</a></li>
         </ul>
     </nav>
 </header>
-
   
 
     <!-- Contenido principal -->
     <main>
         <article class="biography">
-            <h2>Biografía de Bang Chan</h2>
-            <img src="/Bang_Chan_portada.5e9e0664.webp" alt="Imagen de Bang Chan">
+            <h1>Biografía de Bang Chan</h1>
+            <img src="/bang_chan.eea3514d.jpg" alt="Imagen de Bang Chan" class="portada-image">
+            
+            
             <p>Bang Chan, cuyo nombre real es Christopher Bang, nació el 3 de octubre de 1997 en Seúl, Corea del Sur.</p>
             <p>Desde joven, Bang Chan mostró un gran interés por la música y comenzó a entrenar como aprendiz pero en lo que más destaca es en su capacidad para componer canciones. Tiene muchísimas canciones registradas bajo su nombre o bajo 3RACHA que es el grupo formado por la Rap Line de Stray Kids (Banchang, Chanbin y Han)</p>
             <p>En 2017, Bang Chan debutó como líder del grupo de K-pop Stray Kids bajo la compañía JYP Entertainment, una de las más reconocidas a nivel mundial siendo la misma discográfica a la que pertenecen grupos como Twice.</p>
         </article>
+        <img src="/Bang_Chan_portada.3f01877f.jpg" alt="Imagen de Bang Chan" class="responsive-image">
         <aside>
             <h3>Curiosidades sobre Bang Chan</h3>
             <ul>
@@ -47,25 +63,59 @@
             </ul>
         </aside>
         <a href="/pages/leeknow.html"><button id="skz-btn">Conoce más sobre Lee Know aquí</button></a>
+
+
+<!-- Flecha SVG para hacer scroll hacia arriba -->
+<div id="btn-scroll-top" class="scroll-top hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
+        </path>
+    </svg>
+</div>
+
+
+
+
+
     </main>
     
     <!-- Include para incorporar el footer como componente reutilizado -->
     <footer class="footer">
     <div class="container">
-        <div>
+        <div class="logo-footer">
+            <a href="/index.html"><img src="/logo-footer.5f1c411d.png" alt="Stray Kids Logo"></a>
+            <div>
+                <p>2024 © PAC 2 html sobre Stray Kids</p>
+                <p>Actividad realizada por Aranzazu Fernandez</p>
+            </div>
+        </div>
+        <nav id="footer-menu">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/miembros.html">Miembros</a></li>
+                <li><a href="/pages/presentacion.html">Presentación</a></li>
+                <li><a href="/pages/links.html">Enlaces</a></li>
+        </ul></nav>
+        <div class="contact">
             <ul>
                 <li><a href="https://straykids.jype.com/">Sitio web oficial</a></li>
                 <li><a href="mailto:info@straykids.com">Contacto</a></li>
             </ul>
         </div>
-        <div class="credits">
-            <p>2024 © PAC 1 html sobre Stray Kids</p>
-            <p>Actividad realizada por Aranzazu Fernandez</p>
-        </div>
-    </div>         
+        
+
+    </div>
 </footer>
 
-<script src="/bangchan.9b5a8575.js"></script></body>
+
+
+    <!-- Archivo de script JavaScript -->
+    <script src="/script.c10090b4.js"></script>
+
+
+
+
+</body>
 </html>
 
 
