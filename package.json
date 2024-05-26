@@ -6,11 +6,11 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all clean parcel:dev",
     "build": "parcel build src/index.html",
     "parcel:dev": "parcel src/index.html",
-    "parcel:build": "parcel build src/index.html",
-    "clean": "rimraf dist .parcel-cache"
+    "clean": "rm -rf .parcel-cache dist",
+    "parcel:build": "npx parcel build src/index.html",
+    "start": "npx parcel serve src/index.html"
   },
   "keywords": [],
   "author": "Aranzazu Fernandez",
@@ -23,10 +23,7 @@
     "posthtml-include": "^2.0.1",
     "rimraf": "^5.0.5"
   },
-  
   "htmlnano": {
     "minifySvg": false
   }
-
-
 }
