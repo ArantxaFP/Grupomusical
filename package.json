@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf .parcel-cache dist",
-    "parcel:build": "npm install posthtml-include && npx parcel build src/index.html",
+    "parcel:build": "npx parcel build src/index.html",
     "start": "npx parcel serve src/index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.0.0",
-    "posthtml": "^0.16.6",
-    "posthtml-include": "^1.7.4"
+    "posthtml": "^0.16.0",
+    "posthtml-include": "^1.0.0"
   }
 }
