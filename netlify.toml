@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run parcel:build"
+  command = "npx parcel build src/index.html"
   publish = "dist"
 
 [build.environment]
