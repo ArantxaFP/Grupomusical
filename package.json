@@ -1,15 +1,19 @@
 {
   "name": "pac1html",
-  "source": "src/index.html",
   "version": "1.0.0",
   "description": "",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all clean parcel:dev",
-    "build": "npm-run-all clean parcel:build",
-    "parcel:dev": "parcel",
-    "parcel:build": "parcel build",
+    "start": "parcel src/index.html",
+    "build": "npm run clean && npm run parcel:build",
+    "parcel:dev": "parcel serve src/index.html",
+    "parcel:build": "parcel build src/index.html",
     "clean": "rimraf dist .parcel-cache"
   },
   "keywords": [],

@@ -15,19 +15,25 @@
 </head>
 
 <body> 
-    <!-- Include para incorporar el header como componente reutilizado -->   
-    <include src="./src/components/header.html"></include>
-  
+    <!-- Include para incorporar el header como componente reutilizado    
+    <include src="./src/components/header.html"></include>-->   
+    <include src="../components/header.html"></include>
 
     <!-- Contenido principal -->
     <main>
         <article class="biography">
-            <h2>Biografía de Lee Know</h2>
-            <img src="../assets/img/Leeknow_portada.webp" alt="Imagen de Bang Chan">
+            <h1>Biografía de Lee Know</h1>
+            
+            <img src="../assets/img/lee_know.jpg" alt="Imagen de Lee Know" class="portada-image">
+
+
             <p>Lee Know, cuyo nombre real es Lee Minho, nació el 25 de octubre de 1998 en Gimpo, Corea del Sur.</p>
             <p>Desde joven, Lee Know mostró un gran interés por la música y comenzó a entrenar como aprendiz. Destaca por su habilidad en el baile y su versatilidad en el escenario. Es por ello que lidera la Dance Line junto con Hyunjin y Felix.</p>
             <p>En 2017, Lee Know debutó como miembro del grupo de K-pop Stray Kids bajo la compañía JYP Entertainment. Ha demostrado ser un talentoso bailarín y un integrante crucial en las coreografías del grupo.</p>
         </article>
+
+        <img src="../assets/img/Leeknow_portada.jpg" alt="Imagen de Lee Know" class="responsive-image">
+
         <aside>
             <h3>Curiosidades sobre Lee Know</h3>
             <ul>
@@ -38,10 +44,29 @@
         </aside>
 
         <a href="bangchan.html"><button id="skz-btn">Conoce más sobre Bang Chan aquí</button></a>
+
+
+<!-- Flecha SVG para hacer scroll hacia arriba -->
+<div id="btn-scroll-top" class="scroll-top hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+        <path
+            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
+        </path>
+    </svg>
+</div>
+
+
     </main>
     
-    <!-- Include para incorporar el footer como componente reutilizado -->
-    <include src="./src/components/footer.html"></include>
+    <!-- Include para incorporar el footer como componente reutilizado 
+    <include src="./src/components/footer.html"></include> -->
+    <include src="../components/footer.html"></include>
+
+
+
+    <!-- Archivo de script JavaScript -->
+    <script src="../assets/js/script.js"></script>
+
 
 </body>
 </html>
