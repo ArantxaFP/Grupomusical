@@ -1,30 +1,17 @@
 {
   "name": "pac1html",
-  "source": "src/index.html",
   "version": "1.0.0",
   "description": "",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/index.html",
-    "parcel:dev": "parcel src/index.html",
     "clean": "rm -rf .parcel-cache dist",
     "parcel:build": "npx parcel build src/index.html",
     "start": "npx parcel serve src/index.html"
-
   },
-  "keywords": [],
-  "author": "Aranzazu Fernandez",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "htmlnano": "^2.1.1",
-    "npm-run-all": "^4.1.5",
     "parcel": "^2.0.0",
-    "posthtml": "^0.16.6",
-    "posthtml-include": "^1.0.0",
-    "rimraf": "^5.0.5"
-  },
-  "htmlnano": {
-    "minifySvg": false
+    "posthtml-include": "^1.0.0"
   }
 }
