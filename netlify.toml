@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm ls && npm run parcel:build"
+  command = "npm run parcel:build"
   publish = "dist"
 
 [build.environment]
