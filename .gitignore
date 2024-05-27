@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Parcel cache
+.parcel-cache/
+
+# Dist directory
+dist/
+
+# Environment files
+.env
+
+# System files
+.DS_Store
+Thumbs.db

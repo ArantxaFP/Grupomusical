@@ -2,7 +2,6 @@
   "name": "pac1html",
   "version": "1.0.0",
   "description": "",
-  "source": "src/index.html",
   "browserslist": [
     "> 0.5%",
     "last 2 versions",
@@ -20,6 +19,7 @@
   "author": "Aranzazu Fernandez",
   "license": "ISC",
   "devDependencies": {
+    "chalk": "^5.3.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.12.0",
     "posthtml-include": "^2.0.1",
