@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada - STRAY KIDS</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <meta name="description" content="Pàgina dedicada a la difusií del grup de Kpop Stray Kids">
+    <meta name="description" content="Página dedicada a la difusión del grupo de Kpop Stray Kids">
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,41 @@
 </head>
 
 <body class="home-page">
-    <!-- Include para incorporar el header como componente reutilizado
-    <include src="/components/header.html"></include>-->
+    <header class="header">
+        <div class="logo-header">
+            <!-- Ruta relativa para el logo -->
+            <a href=""><img src="./assets/img/logo-header.png" alt="Stray Kids Logo" class="logo"></a>
+            <h2 class="header-title">Grupo de K-Pop reconocido mundialmente</h2>
+        </div>
+        
+            <nav>
+                <ul>
+                    <li><a href="/pages/miembros.html">Miembros</a></li>
+                    <li><a href="/pages/presentacion.html">Presentación</a></li>
+                    <li><a href="/pages/links.html">Enlaces</a></li>
+                </ul>
+            </nav>
+         
+
+       <!--  <nav id="main-menu">
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <button class="close-btn" aria-label="Cerrar menú" style="display: none;">&#10005;</button>
+           
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li class="dropdown">
+                    
+                    <a href="/pages/miembros.html">Miembros &#9662;</a>
+                    <ul class="submenu">
+                        <li><a href="/pages/leeknow.html">Lee Know</a></li>
+                        <li><a href="/pages/bangchan.html">Bang Chan</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pages/presentacion.html">Presentación</a></li>
+                <li><a href="/pages/links.html">Enlaces</a></li>
+            </ul>
+        </nav>-->
+    </header>
 
     <header class="home-page">
         <div class="text-container">
@@ -24,51 +57,63 @@
         </div>
     </header>
 
-
     <!-- Contenido principal -->
     <main id="main">
         <div id="corazon-clip-path"></div>
 
         <div>
-
             <section class="container-info">
-                <h2 class="text-center">¿Qué puedes encontrar en esta web? Descubre al grupo de pop coreano Stray Kids
-                </h2>
-                <p>Aquí puedes encontrar información sobre el grupo de pop coreano Stray Kids y explorar su música,
-                    biografías de los miembros, historias detrás de las canciones y más.</p>
+                <h2 class="text-center">¿Qué puedes encontrar en esta web? Descubre al grupo de pop coreano Stray Kids</h2>
+                <p>Aquí puedes encontrar información sobre el grupo de pop coreano Stray Kids y explorar su música, biografías de los miembros, historias detrás de las canciones y más.</p>
             </section>
         </div>
         <div class="image-container-mvsuperboard"></div>
 
         <div>
-            <blockquote>You make Stray Kids stay</blockquote> Con este lema al final de muchos vídeos, Stray Kids
-            refleja la conexión entre el grupo y sus fans, conocidos como STAYs.
+            <blockquote>You make Stray Kids stay</blockquote> Con este lema al final de muchos vídeos, Stray Kids refleja la conexión entre el grupo y sus fans, conocidos como STAYs.
         </div>
 
         <div id="contenedor-texto-corazones">
             <img id="corazones" src="./assets/img/heart-bubble-pops.gif" alt="Corazones voladores">
-
         </div>
 
         <!-- Flecha SVG para hacer scroll hacia arriba -->
         <div id="btn-scroll-top" class="scroll-top hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-                <path
-                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
-                </path>
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z"></path>
             </svg>
         </div>
-
     </main>
 
-    <!-- Include para incorporar el footer como componente reutilizado 
-    <include src="../components/footer.html"></include>-->
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo-footer">
+                <a href=""><img src="./assets/img/logo-footer.png" alt="Stray Kids Logo"></a>
+                <div>
+                    <p>2024 © PAC 2 html sobre Stray Kids</p>
+                    <p>Actividad realizada por Aranzazu Fernandez</p>
+                </div>
+            </div>
+            <nav id="footer-menu">
+                <ul>
+                   <!--  <li><a href="">Inicio</a></li>
+                    <li><a href="/pages/miembros.html">Miembros</a></li>
+                    <li><a href="/pages/presentacion.html">Presentación</a></li>
+                    <li><a href="/pages/links.html">Enlaces</a></li>-->
+                </ul>
+            </nav>
+            <div class="contact">
+                <ul>
+                    <li><a href="https://straykids.jype.com/">Sitio web oficial</a></li>
+                    <li><a href="mailto:info@straykids.com">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <!-- Archivo de script JavaScript -->
     <script src="./assets/js/script.js"></script>
-
-
 </body>
 
 </html>
