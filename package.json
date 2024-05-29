@@ -9,10 +9,12 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
+    "start": "parcel src/pages/index.html --log-level verbose",
+
+
     "build": "npm run clean && npm run parcel:build",
-    "parcel:dev": "parcel serve src/index.html",
-    "parcel:build": "parcel build src/index.html",
+    "parcel:dev": "parcel serve src/pages/index.html",
+    "parcel:build": "parcel build src/pages/index.html",
     "clean": "rimraf dist .parcel-cache"
   },
   "keywords": [],
