@@ -6,7 +6,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --log-level verbose",
     "clean": "rm -rf dist .parcel-cache",
+ 
+
+    "prebuild": "npm install --legacy-peer-deps",
     "build": "npm run clean && npm run parcel:build",
+
+
     "parcel:dev": "parcel serve src/index.html",
     "parcel:build": "parcel build src/index.html"
   },
