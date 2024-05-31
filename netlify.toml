@@ -1,0 +1,8 @@
+# netlify.toml
+[build]
+  command = "npm run build" # Asegúrate de que este comando coincida con tu script de build real en package.json
+  publish = "dist" # Asegúrate de que este directorio sea el que contiene los archivos para publicar
+
+# Configura la versión de Node.js, si es necesario
+[build.environment]
+  NODE_VERSION = "18.20.3"
