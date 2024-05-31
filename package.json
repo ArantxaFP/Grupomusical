@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "pac2html",
   "version": "1.0.0",
   "main": "index.js",
@@ -23,10 +24,40 @@
     "parcel": "^2.12.0",
     "posthtml": "^0.16.6",
     "posthtml-include": "^2.0.1"
+=======
+  "name": "pac1html",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/pages/index.html --log-level verbose",
+
+
+    "build": "npm run clean && npm run parcel:build",
+    "parcel:dev": "parcel serve src/pages/index.html",
+    "parcel:build": "parcel build src/pages/index.html",
+    "clean": "rimraf dist .parcel-cache"
+  },
+  "keywords": [],
+  "author": "Aranzazu Fernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^5.3.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.12.0",
+    "posthtml-include": "^2.0.1",
+    "rimraf": "^5.0.5"
+>>>>>>> e201aea8dbafeaf169f0ab70b58eca480f7da822
   },
   "posthtml": {
     "plugins": {
       "posthtml-include": {
+<<<<<<< HEAD
         "root": "./src"
       }
     }
@@ -37,4 +68,11 @@
 
 
 
+=======
+        "root": "./src",
+        "encoding": "utf-8"
+      }
+    }
+  }
+>>>>>>> e201aea8dbafeaf169f0ab70b58eca480f7da822
 }
