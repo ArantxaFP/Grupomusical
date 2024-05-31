@@ -1,0 +1,1010 @@
+/* Font general styles */
+h1 {
+  color: #ff4398;
+  font-family: cursive;
+  font-size: 3em;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-family: 'Montserrat';
+}
+
+a :hover {
+  color: #ff4398;
+  text-decoration: none;
+}
+
+
+
+
+p {
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+
+
+
+
+
+
+/********************************************
+Estilos componente header
+**********************************************/
+
+.header {
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  line-height: 1.1;
+  color: #333;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* Asegura que la barra ocupe el ancho completo */
+}
+
+.logo-header .logo {
+  margin-left: 20px;
+  max-width: 10%;
+  /* Limita el tamaño máximo del logo */
+}
+
+
+.header-title {
+  margin: 0 20px;
+  font-size: 24px;
+  color: #333;
+  font-family: cursive;
+}
+
+
+header nav ul {
+  list-style-type: none;
+  margin: 0 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  /* Transición suave para el despliegue del menú */
+}
+
+header nav ul li {
+  margin-right: 10px;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: blue;
+}
+
+nav ul li a.current {
+  color: #ff4398;
+}
+
+
+
+/* Estilos para el menú desplegable */
+header nav ul li.dropdown {
+  position: relative;
+}
+
+header nav ul li .submenu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: auto;
+}
+
+header nav ul li.dropdown:hover .submenu {
+  display: block;
+}
+
+header nav ul li .submenu li {
+  clear: both;
+  color: black;
+}
+
+header nav ul li .submenu li a {
+  color: #333;
+  /* Color de los enlaces en el submenú */
+  padding: 10px 20px;
+  /* Espaciado dentro de los enlaces del submenú */
+  text-decoration: none;
+  /* Sin subrayado en los enlaces */
+  display: block;
+  /* Hace que los enlaces ocupen toda la anchura del elemento li */
+}
+
+header nav ul li .submenu li a:hover {
+  background-color: #ddd;
+  /* Color de fondo al hacer hover en los enlaces del submenú */
+}
+
+
+.menu-toggle {
+  display: none;
+  /* Oculto por defecto */
+  cursor: pointer;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001;
+}
+
+
+
+/* Media queries para tablet y móvil */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+  }
+
+
+}
+
+
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+    /* Asegura que el botón esté visible en móviles */
+  }
+
+  header nav ul {
+    display: none;
+    /* Oculta el menú por defecto */
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 60%;
+    height: calc(100vh - 20px);
+    background-color: white;
+    color: #333;
+    transform: translateX(100%);
+    /* Inicialmente oculto fuera de la pantalla */
+    transition: transform 0.3s ease;
+    /* Transición suave para la transformación */
+    padding-top: 10px;
+    /* Espacio adicional en la parte superior dentro del menú */
+    z-index: 1000;
+  }
+
+  header nav ul.is-visible {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  header nav ul.is-visible+.close-btn {
+    display: block;
+  }
+
+  header nav ul li a.current {
+    color: #ff4398;
+  }
+
+
+  /* Estilos para los submenús en móviles */
+  .submenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .dropdown:hover .submenu,
+  .dropdown:focus-within .submenu {
+    display: flex;
+    /* Muestra el submenú cuando se hace hover o focus en su elemento padre */
+  }
+
+}
+
+
+/********************************************
+Estilos contenedores
+**********************************************/
+
+#main {
+  padding: 30px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+
+}
+
+
+
+/* Estilos para la imagen dentro del contenedor */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Establece altura completa de la ventana */
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+
+
+
+
+/********************************************
+Estilos para el footer incluyendo la línea separadora que tiene transición de color
+**********************************************/
+
+.footer {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 160px;
+  overflow: hidden;
+  background-color: white;
+  color: #333;
+  text-align: left;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  /* La altura del borde animado */
+  background: linear-gradient(to right, #FF4398 0%, #032eed 50%, #FF4398 100%);
+  animation: shiftGradient 3s linear infinite;
+  /* Ajusta la duración según la preferencia de velocidad */
+}
+
+@keyframes shiftGradient {
+
+  0%,
+  100% {
+    background-position: 100% 0;
+  }
+
+  50% {
+    background-position: 0% 0;
+  }
+}
+
+
+.footer .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+footer nav ul li a:hover {
+  color: blue;
+}
+
+footer nav ul li a.current {
+  color: #ff4398;
+}
+
+
+.logo-footer a img {
+  width: 10%;
+  transition: filter 0.5s;
+}
+
+.logo-footer a:hover img {
+  filter: brightness(0.8) sepia(1) hue-rotate(-50deg);
+}
+
+
+.contact div {
+  margin-bottom: 2%;
+}
+
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 260px;
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    /* Elementos apilados verticalmente */
+    align-items: center;
+    /* Centrado de elementos */
+  }
+
+  .footer nav,
+  .footer div {
+    width: 100%;
+    /* Elementos ocupan todo el ancho disponible */
+    margin-bottom: 10px;
+    /* Margen para separar los elementos verticalmente */
+  }
+
+  .logo-footer a img {
+    width: 20%;
+    /* Aumento del tamaño del logo para mejor visibilidad */
+  }
+}
+
+
+
+/* Estilos para el botón de scroll hacia arriba */
+.scroll-top svg {
+  fill: #ff4398;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/********************************************
+Estilos para la página home
+**********************************************/
+
+/********************************************
+Efecto header home
+**********************************************/
+
+body.home-page {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+}
+
+.home-page body {
+  margin: 0;
+  overflow: hidden;
+}
+
+
+
+
+header.home-page {
+  background-image: url("../img/componentes_skz_superboard_mv_mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  /* Ajustado para mejor visualización en móviles */
+  box-sizing: border-box;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centra el contenido verticalmente */
+}
+
+header.home-page h1 {
+  font-size: 3em;
+}
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  header.home-page {
+    background-image: url("../img/componentes_skz_superboard_mv.jpg");
+    /* Imagen para tablets y escritorios */
+    padding: 300px 0;
+    /* Padding grande para expandir el tamaño del header */
+    font-size: 3rem;
+
+
+  }
+}
+
+/********************************************
+Imagen gif dentro de texto stray kids en header home
+**********************************************/
+
+.text-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Asegúrate de centrar el texto verticalmente también */
+  height: 100vh;
+  /* Esto puede ajustarse según tus necesidades */
+}
+
+.clipped-text {
+  font-size: 10vw;
+  font-family: 'Montserrat', sans-serif;
+  /* Cambiado para coincidir con la fuente importada */
+  font-weight: bold;
+  color: transparent;
+  background-image: url("../img/tumblr_cbead511b250a0328f59d26a2febf727_fee8d347_500.gif");
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  color: transparent;
+  background-image: inherit;
+  /* Hereda el mismo fondo que el elemento padre */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .clipped-text {
+    font-size: 20vw;
+  }
+}
+
+
+
+
+
+/********************************************
+Clip path en home
+**********************************************/
+
+#corazon-clip-path {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  /* Posicionamiento absoluto para el centrado */
+  left: 50%;
+  /* Centrado horizontal */
+  animation: cambiarForma 10s linear infinite;
+
+}
+
+@keyframes cambiarForma {
+
+  0%,
+  10% {
+    clip-path: polygon(50% 20%, 60% 15%, 70% 20%, 75% 35%, 70% 55%, 50% 75%, 30% 55%, 25% 35%, 30% 20%, 40% 15%);
+  }
+
+  20% {
+    clip-path: polygon(50% 20%, 60% 10%, 75% 20%, 80% 40%, 75% 65%, 50% 90%, 25% 65%, 20% 40%, 25% 20%, 40% 10%);
+  }
+
+  30% {
+    clip-path: polygon(50% 15%, 65% 10%, 75% 25%, 80% 50%, 70% 75%, 50% 95%, 30% 75%, 20% 50%, 25% 25%, 35% 10%);
+  }
+
+  40% {
+    clip-path: polygon(50% 5%, 70% 10%, 80% 30%, 85% 55%, 75% 85%, 50% 100%, 25% 85%, 15% 55%, 20% 30%, 30% 10%);
+  }
+
+  50% {
+    clip-path: polygon(50% 0%, 75% 5%, 85% 35%, 90% 60%, 80% 90%, 50% 100%, 20% 90%, 10% 60%, 15% 35%, 25% 5%);
+  }
+
+  60% {
+    clip-path: polygon(50% 0%, 80% 0%, 90% 40%, 95% 65%, 85% 95%, 50% 100%, 15% 95%, 5% 65%, 10% 40%, 20% 0%);
+  }
+
+  70% {
+    clip-path: polygon(50% 0%, 85% 0%, 95% 45%, 100% 70%, 90% 100%, 50% 100%, 10% 100%, 0% 70%, 5% 45%, 15% 0%);
+  }
+
+  80% {
+    clip-path: polygon(50% 0%, 90% 0%, 100% 50%, 100% 75%, 95% 100%, 50% 100%, 5% 100%, 0% 75%, 0% 50%, 10% 0%);
+  }
+
+  90%,
+  100% {
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%, 0% 100%, 0% 0%, 0% 0%);
+  }
+}
+
+
+
+/*********************************************
+Estilo contenido home
+**********************************************/
+.container-info {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  text-align: center;
+}
+
+.container-info section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/********************************************
+Imagen interior home
+**********************************************/
+
+
+.image-container-mvsuperboard {
+  width: 100%; 
+  height: 700px;
+  background-image: url("../img/superboard_mv.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Reglas para móviles */
+@media (max-width: 767px) {
+  .image-container-mvsuperboard {
+      background-image: url("../img/superboard_mv_mobile.jpg");
+      height: 200px;
+
+  }
+}
+
+
+
+
+
+/*********************************************
+Estilo cita prefooter home
+**********************************************/
+
+/* Estilo general para blockquote */
+blockquote {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  /* Cursiva para indicar que es una cita */
+  color: #333;
+  border-left: 5px solid #ff4398;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Añado comillas decorativas usando pseudo-elementos */
+blockquote:before {
+  content: open-quote;
+  font-size: 3rem;
+  color: #ff4398;
+  line-height: 0.1em;
+  margin-right: 10px;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  content: close-quote;
+  font-size: 3rem;
+  color: #ff4398;
+  line-height: 0.1em;
+  margin-left: 5px;
+  vertical-align: -0.4em;
+}
+
+/* Ajuste para dispositivos móviles*/
+@media (max-width: 768px) {
+  blockquote {
+    font-size: 1.8rem;
+    padding: 20px 15px;
+    margin: 2%;
+  }
+}
+
+
+
+
+/*********************************************
+Animación corazones prefooter home
+**********************************************/
+
+
+#contenedor-texto-corazones {
+  position: relative;
+  width: 100%;
+  margin: 1px auto 10px;
+  padding: 1%;
+  background-color: white;
+}
+
+#corazones {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  top: 1px;
+  left: 15%;
+  animation: volar 60s linear infinite;
+}
+
+
+
+@keyframes volar {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(100px);
+  }
+
+  50% {
+    transform: translateX(500px);
+  }
+
+  75% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+
+
+
+/********************************************
+Estilos específicos para la página de miembros
+**********************************************/
+
+.miembros-page body {
+  background-color: #fff;
+}
+
+
+/********************************************
+Estilos para el listado de miembros
+**********************************************/
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  }
+
+.member {
+  width: calc(50% - 40px);  /* Ajusta el ancho, permitiendo un poco de margen */
+  margin: 20px;  /* Margen para separar y ayudar en el centrado de los .member */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Para tablets: 2 elementos por fila */
+@media (max-width: 768px) {
+  .member {
+    width: calc(50% - 40px);
+    /* Ajusta si es necesario para el diseño de la tablet */
+  }
+}
+
+/* Para móviles: 1 elemento por fila */
+@media (max-width: 480px) {
+  .member {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    margin: 10px 0;
+    /* Ajusta los márgenes superior e inferior para móviles */
+  }
+}
+
+.member img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+ }
+
+
+
+
+/*********************************************
+Estilo hover imagen listado miembros
+**********************************************/
+
+/* Estilo básico para las imágenes de los miembros */
+.member-image {
+  transition: filter 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Efecto hover para las imágenes de los miembros */
+.member a:hover .member-image {
+  filter: brightness(0.8) sepia(1) hue-rotate(-50deg);
+  /* Crea un efecto rosado */
+}
+
+/* Centrar contenido en los divs de miembros */
+.member {
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+
+/********************************************
+Estilos para los botones de los miembros 
+**********************************************/
+
+#skz-btn {
+  position: relative;
+  padding: 15px 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 14px;
+  color: #ff4398;
+  background-color: #FFFFFF;
+  border: 1px solid transparent;
+  transition: all .3s;
+  z-index: 1;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+#skz-btn:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ff4398;
+  transition: all .3s;
+  z-index: -1;
+}
+
+#skz-btn:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+  border: 1px solid #ff4398;
+  transition: all .3s;
+  z-index: -2;
+}
+
+#skz-btn:hover {
+  color: #ff4398;
+}
+
+#skz-btn:hover:before {
+  top: -10px;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  border-width: 0;
+}
+
+#skz-btn:hover:after {
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  border-width: 1px;
+}
+
+
+
+
+
+
+/********************************************
+Estilos específicos para la página de cada miembro 
+**********************************************/
+
+/* Estilos para la imagen de portada */
+.portada-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* Estilos generales para responsividad de imagen */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos para centrar todo el contenido */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media queries para ajustes específicos de mobile */
+@media (max-width: 768px) {
+
+  .biography,
+  aside {
+    width: 90%;
+    /* Reduce el ancho para dar más espacio */
+    padding: 20px;
+    /* Aumenta el padding para mejor lectura */
+  }
+
+}
+
+/* Aseguro que el contenido de texto también esté centrado */
+.biography h1,
+.biography p,
+aside h3,
+aside ul {
+  text-align: center;
+  /* Centra el texto de estos elementos */
+}
+
+
+/* Estilos para el título dentro del aside */
+aside h3 {
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la lista dentro del aside */
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilos para los elementos de la lista dentro del aside */
+aside li {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+
+/********************************************
+Estilos página de enlaces
+**********************************************/
+
+section {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.links-page {
+  padding: 0;
+  text-align: left;
+  list-style-type: none;
+  /* Elimino los puntos de la lista */
+}
+
+.links-page li {
+  margin-bottom: 10px;
+}
+
+.links-page li a {
+  color: #333;
+  /* Color predeterminado del texto */
+  text-decoration: none;
+}
+
+.links-page li a:hover {
+  color: #ff4398;
+  /* Cambia el color del texto al hacer hover */
+}
+
+
+.video-container {
+  position: relative;
+  width: 70%;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/********************************************
+Estilos para el botón de scroll top páginas interiores
+**********************************************/
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  /* De entrada no se tiene que mostrar */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-top:not(.hidden) {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+  /* Usar display en lugar de opacidad */
+}

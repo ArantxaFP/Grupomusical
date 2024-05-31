@@ -1,0 +1,40 @@
+{
+  "name": "pac2html",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html --log-level verbose",
+
+    "clean": "rmdir /s /q dist .parcel-cache",
+
+
+
+    "build": "npm run clean && npm run parcel:build",
+    "parcel:dev": "parcel serve src/index.html",
+    "parcel:build": "parcel build src/index.html"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "posthtml": "^0.16.6",
+    "posthtml-include": "^2.0.1"
+  },
+  "posthtml": {
+    "plugins": {
+      "posthtml-include": {
+        "root": "./src"
+      }
+    }
+  }
+  
+  
+
+
+
+
+}
