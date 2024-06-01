@@ -22,7 +22,9 @@
 
     "parcel:build": "parcel build",
 
-    "clean": "rimraf dist .parcel-cache"
+    "clean": "rimraf dist .parcel-cache",
+
+    "preinstall": "echo 'Running preinstall scripts...'"
 
   },
 
