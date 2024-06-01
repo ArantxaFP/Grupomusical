@@ -16,7 +16,8 @@
 
     "start": "npm-run-all clean parcel:dev",
 
-    "build": "npm-run-all clean parcel:build",
+    
+    "build": "parcel build src/pages/index.html --public-url /",
 
     "parcel:dev": "parcel",
 
@@ -25,6 +26,9 @@
     "clean": "rimraf dist .parcel-cache",
 
     "preinstall": "echo 'Running preinstall scripts...'"
+
+
+    
 
   },
 
