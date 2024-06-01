@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
   "name": "pac1html",
   "source": "src/pages/index.html",
   "version": "1.0.0",
@@ -12,23 +12,7 @@
     "parcel:dev": "parcel",
     "parcel:build": "parcel build",
     "clean": "rimraf dist .parcel-cache"
-=======
-  "name": "pac2html",
-  "version": "1.0.0",
 
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html --log-level verbose",
-    "clean": "rm -rf dist .parcel-cache",
- 
-
-    "prebuild": "npm install --legacy-peer-deps",
-    "build": "npm run clean && npm run parcel:build",
-
-
-    "parcel:dev": "parcel serve src/index.html",
-    "parcel:build": "parcel build src/index.html"
->>>>>>> d8edf920677e8bc0c6c5bc748b75ff64580808ff
   },
   "keywords": [],
   "author": "",
